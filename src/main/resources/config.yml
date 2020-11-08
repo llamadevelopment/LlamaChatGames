@@ -1,0 +1,39 @@
+ChatGames:
+  Scramble:
+    - minecraft
+    - youtube
+    - people
+    - cloud
+    - tree
+    - castle
+  Type:
+    - this is a nice sentence
+    - i have to write this sentence to get money
+  Opposite:
+    - interesting:boring
+    - happy:sad
+    - fast:slow
+    - beautiful:ugly
+
+Settings:
+  # 1800 = 30 minutes | 1 = 1 second
+  RepeatTime: 1800
+  Scramble:
+    Time: 45
+    Name: "Descramble the following letters!"
+    Money: 120
+  Type:
+    Time: 45
+    Name: "Type the following sentence!"
+    Money: 65
+  Opposite:
+    Time: 45
+    Name: "Get the opposite word!"
+    Money: 100
+
+Commands:
+  Chatgame:
+    Name: "chatgame"
+    Description: "Start a random chat game"
+    Permission: "llamachatgames.commands.chatgame"
+    Aliases: [ "startchatgame", "scg" ]

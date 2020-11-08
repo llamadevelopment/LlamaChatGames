@@ -1,0 +1,8 @@
+name: LlamaChatGames
+version: 1.0.0-SNAPSHOT
+api: 1.0.0
+author: Mundschutziii
+main: net.lldv.llamachatgames.LlamaChatGames
+description: Funny chat games with LlamaEconomy rewards
+depend:
+  - LlamaEconomy

@@ -1,0 +1,8 @@
+# - - - Messages - - -
+prefix: "§8» §eChatGame §8| §7"
+no-permission: "&cYou have insufficient permissions to execute this command."
+game-already-running: "&cA chat game is already running. Please wait."
+nobody-solved: "&cNo body solved the chat game."
+chatgame-start-broadcast: "&eThere is a new ChatGame. &a[0] &7[1]"
+chatgame-won: "&7[0] &awon the current ChatGame!"
+chatgame-reward: "&aYou got &7[0]$&a."
