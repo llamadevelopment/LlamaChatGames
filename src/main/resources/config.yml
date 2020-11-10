@@ -18,6 +18,8 @@ ChatGames:
 Settings:
   # 1800 = 30 minutes | 1 = 1 second
   RepeatTime: 1800
+  # Needed players to start a random chat game
+  NeededPlayers: 1
   Scramble:
     Time: 45
     Name: "Descramble the following letters!"

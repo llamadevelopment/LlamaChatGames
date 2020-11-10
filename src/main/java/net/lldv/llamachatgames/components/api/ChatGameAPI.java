@@ -27,6 +27,10 @@ public class ChatGameAPI {
     @Setter
     private ChatGame currentGame;
 
+    @Getter
+    @Setter
+    private static int neededPlayers;
+
     public void startRandomChatGame() {
         Random rand = new Random();
         ChatGame chatGame = this.chatGames.get(rand.nextInt(this.chatGames.size()));

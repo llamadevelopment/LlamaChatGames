@@ -32,6 +32,7 @@ public class LlamaChatGames extends PluginBase {
             this.saveDefaultConfig();
             Language.init();
             this.chatGameAPI = new ChatGameAPI(this);
+            ChatGameAPI.setNeededPlayers(this.getConfig().getInt("Settings.NeededPlayers"));
             this.loadPlugin();
             this.getLogger().info("§aLlamaChatGames successfully started.");
         } catch (Exception e) {
