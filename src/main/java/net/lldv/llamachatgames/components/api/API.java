@@ -4,6 +4,7 @@ import cn.nukkit.Player;
 import cn.nukkit.level.Sound;
 import cn.nukkit.network.protocol.PlaySoundPacket;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import net.lldv.llamachatgames.LlamaChatGames;
 import net.lldv.llamachatgames.components.data.ChatGame;
@@ -13,13 +14,10 @@ import net.lldv.llamaeconomy.LlamaEconomy;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 
-public class ChatGameAPI {
+@RequiredArgsConstructor
+public class API {
 
     private final LlamaChatGames instance;
-
-    public ChatGameAPI(LlamaChatGames instance) {
-        this.instance = instance;
-    }
 
     public List<ChatGame> chatGames = new ArrayList<>();
 

@@ -4,35 +4,27 @@ import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.scheduler.TaskHandler;
 import lombok.Getter;
 import net.lldv.llamachatgames.commands.ChatgameCommand;
-import net.lldv.llamachatgames.components.api.ChatGameAPI;
+import net.lldv.llamachatgames.components.api.API;
 import net.lldv.llamachatgames.components.data.ChatGame;
 import net.lldv.llamachatgames.components.language.Language;
 import net.lldv.llamachatgames.components.tasks.ChatGameTask;
 import net.lldv.llamachatgames.listeners.EventListener;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 public class LlamaChatGames extends PluginBase {
 
     @Getter
-    private static LlamaChatGames instance;
-
-    @Getter
-    private ChatGameAPI chatGameAPI;
+    private static API api;
 
     @Getter
     private TaskHandler chatGameTask;
 
     @Override
     public void onEnable() {
-        instance = this;
         try {
             this.saveDefaultConfig();
-            Language.init();
-            this.chatGameAPI = new ChatGameAPI(this);
-            ChatGameAPI.setNeededPlayers(this.getConfig().getInt("Settings.NeededPlayers"));
+            Language.init(this);
+            api = new API(this);
+            API.setNeededPlayers(this.getConfig().getInt("Settings.NeededPlayers"));
             this.loadPlugin();
             this.getLogger().info("§aLlamaChatGames successfully started.");
         } catch (Exception e) {
@@ -42,7 +34,7 @@ public class LlamaChatGames extends PluginBase {
     }
 
     private void loadPlugin() {
-        this.getServer().getPluginManager().registerEvents(new EventListener(this), this);
+        this.getServer().getPluginManager().registerEvents(new EventListener(), this);
         this.getServer().getCommandMap().register("llamachatgames", new ChatgameCommand(this));
 
         this.getConfig().getSection("ChatGames").getAll().getKeys(false).forEach(s -> this.getConfig().getStringList("ChatGames." + s).forEach(e -> {
@@ -50,7 +42,7 @@ public class LlamaChatGames extends PluginBase {
             ChatGame.GameType type = ChatGame.GameType.valueOf(s.toUpperCase());
             int time = this.getConfig().getInt("Settings." + s + ".Time");
             double money = this.getConfig().getDouble("Settings." + s + ".Money");
-            this.chatGameAPI.chatGames.add(new ChatGame(name, type, e, time, money));
+            api.chatGames.add(new ChatGame(name, type, e, time, money));
         }));
 
         this.chatGameTask = this.getServer().getScheduler().scheduleDelayedRepeatingTask(this, () -> {

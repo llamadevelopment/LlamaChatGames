@@ -17,8 +17,8 @@ public class ChatgameCommand extends PluginCommand<LlamaChatGames> {
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
         if (sender.hasPermission(this.getPermission())) {
-            if (!this.getPlugin().getChatGameAPI().isRunning()) {
-                this.getPlugin().getChatGameAPI().startRandomChatGame();
+            if (!LlamaChatGames.getApi().isRunning()) {
+                LlamaChatGames.getApi().startRandomChatGame();
             } else sender.sendMessage(Language.get("game-already-running"));
         } else sender.sendMessage(Language.get("no-permission"));
         return true;

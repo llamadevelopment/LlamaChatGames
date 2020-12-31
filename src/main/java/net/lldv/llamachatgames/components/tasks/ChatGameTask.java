@@ -1,7 +1,7 @@
 package net.lldv.llamachatgames.components.tasks;
 
 import net.lldv.llamachatgames.LlamaChatGames;
-import net.lldv.llamachatgames.components.api.ChatGameAPI;
+import net.lldv.llamachatgames.components.api.API;
 import net.lldv.llamachatgames.components.language.Language;
 
 public class ChatGameTask implements Runnable {
@@ -22,12 +22,12 @@ public class ChatGameTask implements Runnable {
     }
 
     public void run() {
-        if (this.plugin.getChatGameAPI().isRunning()) {
+        if (LlamaChatGames.getApi().isRunning()) {
             this.plugin.getServer().getOnlinePlayers().values().forEach(player -> player.sendMessage(Language.get("nobody-solved")));
-            this.plugin.getChatGameAPI().setCurrentGame(null);
+            LlamaChatGames.getApi().setCurrentGame(null);
         }
-        if (this.plugin.getServer().getOnlinePlayers().values().size() >= ChatGameAPI.getNeededPlayers()) {
-            this.plugin.getChatGameAPI().startRandomChatGame();
+        if (this.plugin.getServer().getOnlinePlayers().values().size() >= API.getNeededPlayers()) {
+            LlamaChatGames.getApi().startRandomChatGame();
         }
     }
 }
