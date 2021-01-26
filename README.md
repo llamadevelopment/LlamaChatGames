@@ -1,19 +1,62 @@
 # LlamaChatGames
+
 Funny chat games with LlamaEconomy rewards
 
-# Thanks to ZAP-Hosting!
+> * Download the latest version here: [Download](https://cloudburstmc.org/resources/llamachatgames.644/download)
+> * Browse other versions of LlamaPets here: [Browse](https://cloudburstmc.org/resources/llamachatgames.644/history)
+
+### Join our Discord:
+[![d](https://img.shields.io/discord/323953253458903040.svg)](https://discord.gg/Qcuv2f6)
+* If you have questions or problems with the plugin, write to us on Discord or Github!
+* You can get faster support on our Discord server! Just open a ticket and we will respond within a short time.
+
+---
+
+## Features
+
+* Scheduled random chat games
+* 3 different types of chat games
+* Start via command a random chat game
+* [MongoDB](https://mongodb.com) support
+* YAML support
+* MySql support
+* Everything is editable
+
+---
+
+## Installation
+
+1. [Download](https://cloudburstmc.org/resources/llamachatgames.644/download) the .jar file.
+2. Paste the file into your plugin folder.
+3. Make sure that [LlamaEconomy](https://cloudburstmc.org/resources/llamaeconomy.634/) is installed.
+4. If you want to use MySql, you have to install [DBLib](https://cloudburstmc.org/resources/dblib.12) on your server.
+5. Start your server.
+6. And have fun using LlamaChatGames.
+
+---
+
+## Commands & Permissions
+
+Command | Usage | Default Permission
+------------ | ------------- | -------------
+chatgame |    /chatgame |    llamachatgames.commands.chatgame
+
+**All commands are editable: Permission, Usage, Command name and Command aliases.**
+
+---
+
+## Thanks to ZAP-Hosting!
 This project wouldn't be possible without the help of ZAP-Hosting!
 ***
 ### ZAP-Hosting
 Zap-Hosting is a VPS, Rootserver, (Lifetime) Gameserver, Domain & TeamSpeak 3/5 hosting company. They offer **good quality** servers **at a low price**. This project was also tested on a ZAP-Hosting Server. So if you need a **cheap** vps/gameserver/rootserver/teamspeak3/etc. hoster, ZAP-Hosting is the best choice.
 
-Get your own **VPS** today here: [Click me](https://zap-hosting.com/schdowvps)
+Get your own **Server** today here: [Click me](https://zap-hosting.com/lldv)
 
-Or your own **Rootserver**: [Click me](https://zap-hosting.com/schdowrootserver)
-
-Special offer:
-Use the code `schdow-10` for a 10% discount
+### Special offer
+Use the code `proxma-20` for a 20% discount
 ***
+
 
 ![YourKit](https://www.yourkit.com/images/yklogo.png)
 ------
